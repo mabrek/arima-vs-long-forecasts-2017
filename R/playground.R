@@ -1,4 +1,5 @@
 source('data.R')
+source('theme.R')
 
 shinyplot(nn5, 150)
 
@@ -11,4 +12,3 @@ shinyplot(nn5, 150)
 ## half-hourly
 
 multiplot(nn5[, c(1, 26, 89, 110)], vline = last(nn5_train_range))
-
