@@ -1,6 +1,7 @@
 source('data.R')
 source('theme.R')
 
+## TODO drop y text
 image_device("daily1")
 m <- nn5[, c(1, 110)]
 r <- nrow(m)
