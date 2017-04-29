@@ -35,3 +35,6 @@ p <- ggplot(data = df) + geom_path(aes(x = Index, y = Value, color = Color), na.
 print(p)
 dev.off()
 
+image_device("half-hourly")
+print(ggplot() + geom_path(aes(x = 1:336, y = taylor[1:336])) + xlab(NULL) + ylab(NULL) + tm + theme_no_labels)
+dev.off()
