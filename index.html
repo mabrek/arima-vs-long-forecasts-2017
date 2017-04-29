@@ -170,6 +170,7 @@
                 transition: 'none',
                 width: 960,
                 height: 700,
+                showNotes: false, // TODO set to true after presentation
                 dependencies: [
                     { src: 'plugin/notes/notes.js', async: true },
                     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
