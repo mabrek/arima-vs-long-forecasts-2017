@@ -7,6 +7,7 @@ library(scales)
 library(shiny)
 library(dygraphs)
 library(multitaper)
+library(lubridate)
 
 
 image_device <- function(name, width=image_width, height=image_height) {
