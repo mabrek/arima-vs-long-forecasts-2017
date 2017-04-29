@@ -47,7 +47,89 @@
                         <li>TODO</li>
                     </ul>
                 </section>
-                
+
+                <section>
+                    <h2>TODO</h2>
+                    <pre>
+    NN5 dataset, TSPred package
+    https://sourceforge.net/p/gpca/wiki/NN3-NN5%20Competition/
+    "A time series is a collection of observations made sequentially in time."
+    at least month of daily data, or even worse, hourly, "multi-step ahead"
+    https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average
+    https://en.wikipedia.org/wiki/Autoregressive_model
+    https://en.wikipedia.org/wiki/Moving-average_model
+    simple formulas from https://tomaugspurger.github.io/modern-7-timeseries.html
+    AR(1) formula
+        mean reversion
+    MA(1) formula
+        shock effects
+    difference, smooth|downsample|add noise, integrate back
+    integrate white noise several times
+    similarities with signal processing
+        impulse response
+        LC circuit analog
+    arima generation methods
+        http://ellisp.github.io/blog/2015/11/21/arima-sims
+    periodic arima processes
+        it's better to do periodogram and add periodic feature (
+        complex root example from http://www.stat.pitt.edu/stoffer/tsa4/R_toot.htm
+        https://en.wikipedia.org/wiki/Autoregressive_model#Graphs_of_AR.28p.29_processes
+        lowpass, highpass, decreasing sinusoid, stable sinusoid
+    fit arima to meandr, weekly pattern, two sinusoids with simple number frequencies
+    external predictors (calendar, weather)
+    picture from http://ellisp.github.io/blog/2015/09/30/autoarima-success-rates
+    arima inference method
+    difficult to train long-range arima
+    3(4) seasons (year, day of month, day of week, hour of day) + holidays
+        http://www.statsmodels.org/dev/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html
+        https://www.otexts.org/fpp/8/9
+    shumway stoffer
+    data gaps, outliers, holidays (zero values), irregular, nonstationar, promotions
+    space state models don't like that too
+    multioutput/structured output
+    detrending vs. mean shift
+    detrending vs. differencing (stochastic vs. determenistic trend)
+        trend stationary vs. unit root
+        http://hedibert.org/wp-content/uploads/2015/04/DT-or-ST.pdf
+        picture from https://en.wikipedia.org/wiki/Unit_root
+    http://fedc.wiwi.hu-berlin.de/xplore/tutorials/sfehtmlnode63.html
+    decomposition (stl, str)
+        A Seasonal-Trend Decomposition Procedure Based on Regression.pdf
+        additive or multiplicative?
+        bayesian decomposition
+    деревья не экстраполируют http://ellisp.github.io/blog/2016/12/10/extrapolation
+    нейронки тоже не очень http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/
+    http://thuijskens.github.io/2016/08/03/time-series-forecasting/
+        ARIMA converges
+        MCMC is slow
+    what to do instead
+        naive seasonal
+        linear (with lots of feature engineering)
+        trees (XGBoost, etc..)
+        assembles
+        NN
+        probabilistic + bayesian
+        poor-man ar-ma - polinomial regression on lags
+        multiple output
+            https://cran.r-project.org/web/packages/MultivariateRandomForest/MultivariateRandomForest.pdf
+            Machine learning strategies for multi-step-ahead time series forecasting.pdf
+            A review and comparison of strategies for multi-step ahead time series forecasting based on NN5 forecasting competition.pdf
+    competitions
+        GEFCom 2014 http://blog.drhongtao.com/2016/04/probabilistic-energy-forecasting-gefcom2014-papers-and-more.html
+        rossman
+        https://www.kaggle.com/c/grupo-bimbo-inventory-demand/
+    check enter/ timeserie folders for forecast
+    hyndman long term arima
+    look at me, now look at your data
+    http://multithreaded.stitchfix.com/blog/2016/04/21/forget-arima/
+    6313-bayesian-intermittent-demand-forecasting-for-large-inventories.pdf
+    https://github.com/facebookincubator/prophet
+    arima fit meandr, sawtooth
+    regularization
+    model fit with model long term forecast
+    data from https://github.com/Yorko/mlcourse_open/blob/master/jupyter_notebooks/topic9_time_series/hw9_time_series.ipynb
+                    </pre>
+                </section>
                 <section>
                     <h2>Summary</h2>
                     <ul>
