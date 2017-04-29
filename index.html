@@ -1,49 +1,99 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+        <title>ARIMA vs. long term forecasts</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white-helv.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/github-gist.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>ARIMA vs. long term forecasts</h1>
+                    <p>
+                        &copy; 2017 Anton Lebedevich
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>Anton Lebedevich:</h2>
+                    <ul>
+                        <li>develops scalable back-end services</li>
+                        <li>solves distributed performance issues</li>
+                        <li>loves time series and anomalies</li>
+                        <li>blogs at <a href="http://mabrek.github.io">mabrek.github.io</a>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Outline</h2>
+                    <ul>
+                        <li>TODO</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Summary</h2>
+                    <ul>
+                        <li>TODO</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Links</h2>
+                    <p>TODO</p>
+                </section>
+                
+                <section>
+                    <h2>Q&amp;A</h2>
+                    <p>
+                    <p>Anton Lebedevich</p>
+                    <p>mabrek@gmail.com</p>
+                    TODO twitter logo<p><a href="https://twitter.com/widdoc">@widdoc</a></p>
+                    <p><a href="http://mabrek.github.io">mabrek.github.io</a></p>
+                    <p><a href="http://mabrek.github.io/arima-vs-long-forecasts-2017">mabrek.github.io/arima-vs-long-forecasts-2017</a></p>
+                </section>
+            </div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                controls: false,
+                progress: false,
+                history: true,
+                center: true,
+                slideNumber: 'c/t',
+                transition: 'none',
+                width: 960,
+                height: 700,
+                dependencies: [
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+        </script>
+    </body>
 </html>
