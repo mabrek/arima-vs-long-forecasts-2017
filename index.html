@@ -65,12 +65,11 @@
                     <ul>
                         <li>multi-step ahead</li>
                         <li>seasonality (year, month, week, day)</li>
-                        <li>external predictors (calendar, weather)</li>
+                        <li>external predictors (calendar, weather, promo)</li>
                         <li>data gaps</li>
                         <li>outliers</li>
                         <li>holidays (zero values)</li>
                         <li>irregular (sometimes)</li>
-                        <li>promotions</li>
                         <li>short train</li>
                     </ul>
                 </section>
@@ -142,23 +141,10 @@
                 <section>
                     <h2>TODO</h2>
                     <pre>
-    https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average
-    https://en.wikipedia.org/wiki/Autoregressive_model
-    https://en.wikipedia.org/wiki/Moving-average_model
-    AR(x) unit root, periodic
-    difference, smooth|downsample|add noise, integrate back
-    periodic arima processes
-        it's better to do periodogram and add periodic feature (
-        complex root example from http://www.stat.pitt.edu/stoffer/tsa4/R_toot.htm
-        https://en.wikipedia.org/wiki/Autoregressive_model#Graphs_of_AR.28p.29_processes
-        lowpass, highpass, decreasing sinusoid, stable sinusoid
-    fit arima to meandr, weekly pattern, two sinusoids with simple number frequencies
+    fit arima to meandr, weekly pattern, two sinusoids with simple number frequencies, meandr + noise, sawtooth
     picture from http://ellisp.github.io/blog/2015/09/30/autoarima-success-rates
     arima inference method
     difficult to train long-range arima
-    3(4) seasons (year, day of month, day of week, hour of day) + holidays
-        http://www.statsmodels.org/dev/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html
-        https://www.otexts.org/fpp/8/9
     shumway stoffer
     space state models don't like that too
     multioutput/structured output
@@ -204,6 +190,12 @@
     model fit with model long term forecast
     data from https://github.com/Yorko/mlcourse_open/blob/master/jupyter_notebooks/topic9_time_series/hw9_time_series.ipynb
     seasonal arima needs many seasons
+    https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average
+    https://en.wikipedia.org/wiki/Autoregressive_model
+    AR(x) unit root
+    periodic arima processes
+        it's better to do periodogram and add periodic feature?
+        complex root example from http://www.stat.pitt.edu/stoffer/tsa4/R_toot.htm
                     </pre>
                 </section>
                 <section>
