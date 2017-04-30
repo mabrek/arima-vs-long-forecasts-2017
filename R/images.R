@@ -43,3 +43,10 @@ data[336:384, "color"] <- "blue"
 p <- ggplot(data) + geom_path(aes(x = x, y = y, color = color)) + scale_colour_identity() + xlab(NULL) + ylab(NULL) + tm + theme_no_labels
 print(p)
 dev.off()
+
+image_device("dirac-delta")
+delta <- data.frame(x = (-500):500, y = 0)
+delta[501, "y"] <- 1
+p <- ggplot(delta) + geom_path(aes(x = x, y = y)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
