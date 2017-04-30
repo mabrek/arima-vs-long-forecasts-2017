@@ -91,3 +91,23 @@ sim <- as.numeric(arima.sim(list(ma = c(0.8, 0.6, 0.4, 0.2, 0.1)), length(delta)
 p <- ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
 print(p)
 dev.off()
+
+
+noise <- rnorm(100)
+image_device("i_0")
+p <- ggplot() + geom_path(aes(x = seq_along(noise), y = noise)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
+
+noise <- cumsum(noise)
+image_device("i_1")
+p <- ggplot() + geom_path(aes(x = seq_along(noise), y = noise)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
+
+
+noise <- cumsum(noise)
+image_device("i_2")
+p <- ggplot() + geom_path(aes(x = seq_along(noise), y = noise)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
