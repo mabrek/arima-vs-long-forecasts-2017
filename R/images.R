@@ -50,3 +50,30 @@ delta[501, "y"] <- 1
 p <- ggplot(delta) + geom_path(aes(x = x, y = y)) + xlab(NULL) + ylab(NULL) + tm
 print(p)
 dev.off()
+
+delta <- rep.int(0, 100)
+delta[1] <- 1
+
+image_device("ar_1")
+start.innov <- c(0)
+sim <- c(start.innov, as.numeric(arima.sim(list(ar = (0.9)), 100, innov = delta, n.start = length(start.innov), start.innov = start.innov)))
+p <- ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
+
+image_device("ar_2_1")
+start.innov <- c(0, 0)
+sim <- c(start.innov, as.numeric(arima.sim(list(ar = c(0.3, 0.3)), 50, innov = delta[1:50], n.start = length(start.innov), start.innov = start.innov)))
+ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
+p <- ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
+
+
+image_device("ar_2_2")
+start.innov <- c(0, 0)
+sim <- c(start.innov, as.numeric(arima.sim(list(ar = c(0.9, -0.85)), 100, innov = delta, n.start = length(start.innov), start.innov = start.innov)))
+ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
+p <- ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
