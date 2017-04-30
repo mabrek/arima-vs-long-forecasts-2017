@@ -196,6 +196,10 @@
                 width: 960,
                 height: 700,
                 showNotes: false, // TODO set to true after presentation
+                math: {
+                    mathjax: 'MathJax-2.7.1/MathJax.js',
+                    config: 'TeX-AMS_HTML-full'
+                },
                 dependencies: [
                     { src: 'plugin/notes/notes.js', async: true },
                     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
