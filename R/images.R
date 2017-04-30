@@ -77,3 +77,12 @@ ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(N
 p <- ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
 print(p)
 dev.off()
+
+image_device("ar_2_3")
+delta <- rep.int(0, 200)
+delta[1] <- 1
+start.innov <- c(0, 0)
+sim <- c(start.innov, as.numeric(arima.sim(list(ar = c(0.08, 0.9)), length(delta), innov = delta, n.start = length(start.innov), start.innov = start.innov)))
+p <- ggplot() + geom_path(aes(x = seq_along(sim) - 1, y = sim)) + xlab(NULL) + ylab(NULL) + tm
+print(p)
+dev.off()
