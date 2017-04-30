@@ -37,5 +37,9 @@ print(p)
 dev.off()
 
 image_device("half-hourly")
-print(ggplot() + geom_path(aes(x = 1:336, y = taylor[1:336])) + xlab(NULL) + ylab(NULL) + tm + theme_no_labels)
+data <- data.frame(x = 1:384, y = taylor[1:384])
+data["color"] <- "black"
+data[336:384, "color"] <- "blue"
+p <- ggplot(data) + geom_path(aes(x = x, y = y, color = color)) + scale_colour_identity() + xlab(NULL) + ylab(NULL) + tm + theme_no_labels
+print(p)
 dev.off()
