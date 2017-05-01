@@ -66,28 +66,6 @@ sameplot <- function(metrics, ...) {
   autoplot(metrics, facet = NULL, ...)
 }
 
-# returned period is in number of samples (sampling intervals)
-find_periods <- function(metrics, significance = 0.99, ...) {
-  nfp <- mclapply(
-    metrics,
-    function(m) {
-      spec <- spec.mtm(ts(coredata(m), frequency = 1),
-                       plot = FALSE, Ftest = TRUE,
-                       returnZeroFreq = FALSE, ...)
-      f.sig <- spec$mtm$Ftest > qf(significance, 2, 2 * spec$mtm$k - 2)
-      if (any(f.sig, na.rm = TRUE)) {
-        data.frame(name = names(m)[1],
-                   period = 1/spec$freq[f.sig],
-                   Ftest = spec$mtm$Ftest[f.sig])
-      } else {
-        data.frame()
-      }
-    })
-  result <- bind_rows(nfp)
-  result$name <- as.character(result$name)
-  result[order(result$Ftest), ]
-}
-
 
 shinyplot <- function(metrics, limit = 100, breakpoints = data.frame(), vline = c()) {
   data <- metrics
