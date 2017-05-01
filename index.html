@@ -64,8 +64,8 @@
                     <h2>Forecasting Challenges</h2>
                     <ul>
                         <li>multi-step ahead</li>
-                        <li>seasonality (year, month, week, day)</li>
-                        <li>external predictors (calendar, weather, promo)</li>
+                        <li>many seasons (year, month, week, day)</li>
+                        <li>external predictors (weather, promo)</li>
                         <li>data gaps</li>
                         <li>outliers</li>
                         <li>holidays (zero values)</li>
@@ -159,8 +159,58 @@
                     <img class="stretch" src="img/arima_7.svg"/>
                 </section>
 
-                
+                <section>
+                    <h2>SARIMAX Challenges</h2>
+                    <div style="text-align: left; margin-left: 40px;">
+                        <p>(&divide;) multi-step ahead</p>
+                        <p>(&divide;) many seasons (year, month, week, day)</p>
+                        <p>(+) external predictors (weather, promo)</p>
+                        <p>(-) data gaps</p>
+                        <p>(&divide;) outliers</p>
+                        <p>(-) holidays (zero values)</p>
+                        <p>(-) irregular (sometimes)</p>
+                        <p>(&divide;) short train</p>
+                    </div>
+                </section>
 
+                <section>
+                    <h2>What to Do Instead</h2>
+                    <ul>
+                        <li>naive seasonal</li>
+                        <li>linear (with lots of feature engineering, lags)</li>
+                        <li>trees (XGBoost, etc..)</li>
+                        <li>assembles</li>
+                        <li>neural networks TODO deep emoji</li>
+                        <li>bayesian</li>
+                        <li>multiple output (NN, ...)</li>
+                        TODO 
+            https://cran.r-project.org/web/packages/MultivariateRandomForest/MultivariateRandomForest.pdf
+            Machine learning strategies for multi-step-ahead time series forecasting.pdf
+            A review and comparison of strategies for multi-step ahead time series forecasting based on NN5 forecasting competition.pdf
+                </section>
+
+                <section>
+                    <h2>Out-of-sample Extrapolation</h2>
+                    <img class="stretch" src="img/extrapolation.svg"/>
+                    TODO image size
+                    <p><a href="http://ellisp.github.io/blog/2016/12/10/extrapolation">ellisp.github.io/blog/2016/12/10/extrapolation</a></p>
+                </section>
+
+                <section>
+                    <h2>NN doesn't Extrapolate Too</h2>
+                    <img class="stretch" src="img/nn-extrapolation.png"/>
+                    <p><a href="http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/">http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/</a></p>
+                </section>
+
+                <section>
+                    <h2>Competitions</h2>
+                    <ul>
+                        <li><a href="http://blog.drhongtao.com/2016/04/probabilistic-energy-forecasting-gefcom2014-papers-and-more.html">blog.drhongtao.com/2016/04/probabilistic-energy-forecasting-gefcom2014-papers-and-more.html</a></li>
+                        <li><a href="https://www.kaggle.com/c/rossmann-store-sales">www.kaggle.com/c/rossmann-store-sales</a></li>
+                        <li><a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand/">www.kaggle.com/c/grupo-bimbo-inventory-demand/</a></li>
+                    </ul>
+                </section>
+                
                 <section>
                     <h2>TODO</h2>
                     <pre>
@@ -175,36 +225,14 @@
         A Seasonal-Trend Decomposition Procedure Based on Regression.pdf
         additive or multiplicative?
         bayesian decomposition
-    деревья не экстраполируют http://ellisp.github.io/blog/2016/12/10/extrapolation
-    нейронки тоже не очень http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/
     http://thuijskens.github.io/2016/08/03/time-series-forecasting/
         ARIMA converges
         MCMC is slow
-    what to do instead
-        naive seasonal
-        linear (with lots of feature engineering)
-        trees (XGBoost, etc..)
-        assembles
-        NN
-        probabilistic + bayesian
-        poor-man ar-ma - polinomial regression on lags
-        multiple output
-            https://cran.r-project.org/web/packages/MultivariateRandomForest/MultivariateRandomForest.pdf
-            Machine learning strategies for multi-step-ahead time series forecasting.pdf
-            A review and comparison of strategies for multi-step ahead time series forecasting based on NN5 forecasting competition.pdf
-    competitions
-        GEFCom 2014 http://blog.drhongtao.com/2016/04/probabilistic-energy-forecasting-gefcom2014-papers-and-more.html
-        rossman
-        https://www.kaggle.com/c/grupo-bimbo-inventory-demand/
     check enter/ timeserie folders for forecast
-    hyndman long term arima
-    look at me, now look at your data
     http://multithreaded.stitchfix.com/blog/2016/04/21/forget-arima/
     6313-bayesian-intermittent-demand-forecasting-for-large-inventories.pdf
     https://github.com/facebookincubator/prophet
-    arima fit meandr, sawtooth
     regularization
-    model fit with model long term forecast
     data from https://github.com/Yorko/mlcourse_open/blob/master/jupyter_notebooks/topic9_time_series/hw9_time_series.ipynb
     seasonal arima needs many seasons
     https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average
