@@ -124,12 +124,13 @@
 
                 <section>
                     <h2>I(0) Process (White Noise)</h2>
-                    TODO formula
+                    <p>$$ y_{t} \sim \mathcal{N}(0,1) $$</p>
                     <img class="stretch" src="img/i_0.svg"/>
                 </section>
 
                 <section>
                     <h2>I(1) Process (Random Walk)</h2>
+                    <p>$$ y_{t} = y_{t-1} + e_{t} $$</p>
                     <img class="stretch" src="img/i_1.svg"/>
                 </section>
 
@@ -151,7 +152,7 @@
 
                 <section>
                     <img class="stretch" src="img/autoarima-success-rates.svg"/>
-                    <a href="http://ellisp.github.io/blog/2015/09/30/autoarima-success-rates">ellisp.github.io/blog/2015/09/30/autoarima-success-rates</a>
+                    <div><q style="font-size: 20px"><a href="http://ellisp.github.io/blog/2015/09/30/autoarima-success-rates">ellisp.github.io/blog/2015/09/30/autoarima-success-rates</a></q><div>
                 </section>
 
                 <section>
@@ -180,7 +181,9 @@
                         <li>linear (with lots of feature engineering, lags)</li>
                         <li>trees (XGBoost, etc..)</li>
                         <li>assembles</li>
-                        <li>neural networks TODO deep emoji</li>
+                        <li>neural networks
+                            <img src="img/more-layers.png" height="38" width="38" style="margin: 0px 0px;"/>
+                        </li>
                         <li>bayesian</li>
                         <li>multiple output</li>
                         <li>&hellip;</li>
@@ -189,27 +192,25 @@
                 <section>
                     <h2>Out-of-sample Extrapolation</h2>
                     <img class="stretch" src="img/extrapolation.svg"/>
-                    TODO image size
-                    <p><a href="http://ellisp.github.io/blog/2016/12/10/extrapolation">ellisp.github.io/blog/2016/12/10/extrapolation</a></p>
+                    <div><q style="font-size: 20px"><a href="http://ellisp.github.io/blog/2016/12/10/extrapolation">ellisp.github.io/blog/2016/12/10/extrapolation</a><q><div>
                 </section>
 
                 <section>
                     <h2>NN doesn't Extrapolate Too</h2>
                     <img class="stretch" src="img/nn-extrapolation.png"/>
-                    <p><a href="http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/">http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/</a></p>
+                    <div><q style="font-size: 20px"><a href="http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/">http://kourentzes.com/forecasting/2016/12/28/can-neural-networks-predict-trended-time-series/</a></q></div>
                 </section>
 
                 <section>
                     <h2>Unit Root or Trend Stationary</h2>
                     <img class="stretch" src="img/Unit_root_hypothesis_diagram.svg"/>
-                    don't difference blindly
-                    <a href="https://en.wikipedia.org/wiki/Unit_root">en.wikipedia.org/wiki/Unit_root</a>
+                    <div><q style="font-size: 20px"><a href="https://en.wikipedia.org/wiki/Unit_root">en.wikipedia.org/wiki/Unit_root</a></q></div>
                 </section>
 
                 <section>
                     <h2>Example Workflow</h2>
                     <img class="stretch" src="img/workflow.png"/>
-                    <a href="http://www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html">www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html</a>
+                    <div><q style="font-size: 20px"><a href="http://www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html">www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html</a></q>
                 </section>
 
                 <section>
@@ -225,31 +226,16 @@
                 <section>
                     <h2>TODO</h2>
                     <pre>
-    space state models don't like that too
-    http://hedibert.org/wp-content/uploads/2015/04/DT-or-ST.pdf
-    http://fedc.wiwi.hu-berlin.de/xplore/tutorials/sfehtmlnode63.html
     decomposition (stl, str)
         A Seasonal-Trend Decomposition Procedure Based on Regression.pdf
         additive or multiplicative?
         bayesian decomposition
-    6313-bayesian-intermittent-demand-forecasting-for-large-inventories.pdf
-    regularization
     https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average
     https://en.wikipedia.org/wiki/Autoregressive_model
-    AR(x) unit root
-    periodic arima processes
-        it's better to do periodogram and add periodic feature?
-        complex root example from http://www.stat.pitt.edu/stoffer/tsa4/R_toot.htm
     shumway stoffer
     https://en.wikipedia.org/wiki/Bass_diffusion_model
     Theta model
                     </pre>
-                </section>
-                <section>
-                    <h2>Summary</h2>
-                    <ul>
-                        <li>TODO</li>
-                    </ul>
                 </section>
                 
                 <section>
