@@ -177,18 +177,78 @@
                 <section>
                     <h2>What to Do Instead</h2>
                     <ul>
-                        <li>naive seasonal</li>
-                        <li>linear (with lots of feature engineering, lags)</li>
+                        <li>start with naïve</li>
+                        <li>linear</li>
                         <li>trees (XGBoost, etc..)</li>
-                        <li>assembles</li>
-                        <li>neural networks
-                            <img src="img/more-layers.png" height="38" width="38" style="margin: 0px 0px;"/>
-                        </li>
+                        <li>combine models</li>
+                        <li>neural networks</li>
                         <li>bayesian</li>
                         <li>multiple output</li>
                         <li>&hellip;</li>
+                    </ul>
                 </section>
 
+                <section>
+                    <h2>Naïve Methods</h2>
+                    <ul>
+                        <li>just keep last value</li>
+                        <li>mean or median</li>
+                        <li>seasonal</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Linear Models</h2>
+                    <ul>
+                        <li>lags</li>
+                        <li>categorical seasons</li>
+                        <li>Fourier seasons</li>
+                        <li>window aggregates</li>
+                        <li>holiday shoulders</li>
+                        <li>promo actions</li>
+                        <li>&hellip;</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <img src="img/xgboost.png"/>
+                </section>
+
+                <section>
+                    <h2>Ensemble Models</h2>
+                    simple average
+                </section>
+
+                <section>
+                    <h2>Neural Networks</h2>
+                    <ul>
+                        <li>entity embeddings</li>
+                        <li>LSTM</li>
+                        <li>more layers</li>
+                        <li>&hellip;</li>
+                    </ul>
+                    <p><img height="100" width="100" src="img/more-layers.png"/></p>
+                </section>
+
+                <section>
+                    <h2>Bayesian</h2>
+                    <ul>
+                        <li>BSTS</li>
+                        <li>Facebook's Prophet</li>
+                        <li>PyDLM, PyFlux, PyMC3, PyStan</li>
+                </section>
+
+                <section>
+                    <h2>Multiple Output</h2>
+                    <ul>
+                        <li>Direct</li>
+                        <li>DirRec</li>
+                        <li>MIMO</li>
+                        <li>DIRMO</li>
+                        <li>&hellip;</li>
+                    </ul>
+                </section>
+                
                 <section>
                     <h2 style="margin: 0px 0px;">Out-of-sample Extrapolation</h2>
                     <img class="stretch" style="margin: 0px 0px;" src="img/extrapolation.svg"/>
